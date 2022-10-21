@@ -1,0 +1,664 @@
+picocom -b 115200 /dev/ttyUSB0
+picocom v3.1
+
+port is        : /dev/ttyUSB0
+flowcontrol    : none
+baudrate is    : 115200
+parity is      : none
+databits are   : 8
+stopbits are   : 1
+escape is      : C-a
+local echo is  : no
+noinit is      : no
+noreset is     : no
+hangup is      : no
+nolock is      : no
+send_cmd is    : sz -vv
+receive_cmd is : rz -vv -E
+imap is        : 
+omap is        : 
+emap is        : crcrlf,delbs,
+logfile is     : none
+initstring     : none
+exit_after is  : not set
+exit is        : no
+
+Type [C-a] [C-h] to see available commands
+Terminal ready
+1 USB Device(s) found
+0 Storage Device(s) found
+Net:   eth0
+Warning: eth0 (eth0) using random MAC address - 0a:b5:66:4e:39:de
+
+Hit any key to stop autoboot:  0 
+device 0 offset 0x80000, size 0x400000
+
+SF: 4194304 bytes @ 0x80000 Read: OK
+## Booting kernel from Legacy Image at 42000000 ...
+   Image Name:   Linux-4.9.37
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    3746996 Bytes = 3.6 MiB
+   Load Address: 40008000
+   Entry Point:  40008000
+   Loading Kernel Image ... OK
+
+Starting kernel ...
+
+Booting Linux on physical CPU 0x0
+Linux version 4.9.37 (jay@ubuntu) (gcc version 6.3.0 (HC&C V100R002C00B032_20190114) ) #13 Fri Jun 19 01:24:38 PDT 2020
+CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c53c7d
+CPU: div instructions available: patching division code
+CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+OF: fdt:Machine model: Hisilicon HI3518EV300 DEMO Board
+Memory policy: Data cache writeback
+CPU: All CPU(s) started in SVC mode.
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 10668
+Kernel command line: mem=42M console=ttyAMA0,115200 root=/dev/mtdblock2 rootfstype=jffs2 rw init=/linuxrc mtdparts=hi_sfc:512K(u-boot.bin),4M(kernel),6M(rootfs.jffs2),7M(govee_A.bin),7M(govee_B.bin),7M(data.bin),512K(config.bin)
+PID hash table entries: 256 (order: -2, 1024 bytes)
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Memory: 34900K/43008K available (5577K kernel code, 204K rwdata, 1348K rodata, 176K init, 255K bss, 8108K reserved, 0K cma-reserved)
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+    vmalloc : 0xc3000000 - 0xff800000   ( 968 MB)
+    lowmem  : 0xc0000000 - 0xc2a00000   (  42 MB)
+    modules : 0xbf000000 - 0xc0000000   (  16 MB)
+      .text : 0xc0008000 - 0xc057a638   (5578 kB)
+      .init : 0xc06ce000 - 0xc06fa000   ( 176 kB)
+      .data : 0xc06fa000 - 0xc072d0a0   ( 205 kB)
+       .bss : 0xc072f000 - 0xc076ee68   ( 256 kB)
+SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+NR_IRQS:16 nr_irqs:16 16
+Gic dist init...
+arm_arch_timer: Architected cp15 timer(s) running at 50.00MHz (phys).
+clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0xb8812736b, max_idle_ns: 440795202655 ns
+sched_clock: 56 bits at 50MHz, resolution 20ns, wraps every 4398046511100ns
+Switching to timer-based delay loop, resolution 20ns
+clocksource: arm,sp804: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 637086815595 ns
+Console: colour dummy device 80x30
+Calibrating delay loop (skipped), value calculated using timer frequency.. 100.00 BogoMIPS (lpj=500000)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+CPU: Testing write buffer coherency: ok
+Setting up static identity map for 0x40008200 - 0x40008258
+devtmpfs: initialized
+VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+futex hash table entries: 256 (order: -1, 3072 bytes)
+pinctrl core: initialized pinctrl subsystem
+NET: Registered protocol family 16
+DMA: preallocated 256 KiB pool for atomic coherent allocations
+Serial: AMBA PL011 UART driver
+12040000.uart: ttyAMA0 at MMIO 0x12040000 (irq = 20, base_baud = 0) is a PL011 rev2
+console [ttyAMA0] enabled
+12041000.uart: ttyAMA1 at MMIO 0x12041000 (irq = 21, base_baud = 0) is a PL011 rev2
+SCSI subsystem initialized
+ssp-pl022 12070000.spi: ARM PL022 driver, device ID: 0x00800022
+ssp-pl022 12070000.spi: mapped registers from 0x12070000 to c306b000
+ssp-pl022 12071000.spi: ARM PL022 driver, device ID: 0x00800022
+ssp-pl022 12071000.spi: mapped registers from 0x12071000 to c306f000
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+Linux video capture interface: v2.00
+Advanced Linux Sound Architecture Driver Initialized.
+clocksource: Switched to clocksource arch_sys_counter
+NET: Registered protocol family 2
+TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+TCP: Hash tables configured (established 1024 bind 1024)
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+workingset: timestamp_bits=30 max_order=14 bucket_order=0
+NFS: Registering the id_resolver key type
+Key type id_resolver registered
+Key type id_legacy registered
+jffs2: version 2.2 (NAND) (ZLIB) (RTIME) (c) 2001-2006 Red Hat, Inc.
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+io scheduler noop registered
+io scheduler deadline registered (default)
+io scheduler cfq registered
+pl061_gpio 120b0000.gpio_chip: PL061 GPIO chip @0x120b0000 registered
+pl061_gpio 120b1000.gpio_chip: PL061 GPIO chip @0x120b1000 registered
+pl061_gpio 120b2000.gpio_chip: PL061 GPIO chip @0x120b2000 registered
+pl061_gpio 120b4000.gpio_chip: PL061 GPIO chip @0x120b4000 registered
+pl061_gpio 120b5000.gpio_chip: PL061 GPIO chip @0x120b5000 registered
+pl061_gpio 120b6000.gpio_chip: PL061 GPIO chip @0x120b6000 registered
+pl061_gpio 120b7000.gpio_chip: PL061 GPIO chip @0x120b7000 registered
+pl061_gpio 120b8000.gpio_chip: PL061 GPIO chip @0x120b8000 registered
+brd: module loaded
+hisi-sfc hisi_spi_nor.0: SPI Nor ID Table Version 1.2
+hisi-sfc hisi_spi_nor.0: all blocks is unlocked.
+hisi-sfc hisi_spi_nor.0: mx25l25635f (Chipsize 32 Mbytes, Blocksize 64KiB)
+7 cmdlinepart partitions found on MTD device hi_sfc
+7 cmdlinepart partitions found on MTD device hi_sfc
+Creating 7 MTD partitions on "hi_sfc":
+0x000000000000-0x000000080000 : "u-boot.bin"
+0x000000080000-0x000000480000 : "kernel"
+0x000000480000-0x000000a80000 : "rootfs.jffs2"
+0x000000a80000-0x000001180000 : "govee_A.bin"
+0x000001180000-0x000001880000 : "govee_B.bin"
+0x000001880000-0x000001f80000 : "data.bin"
+0x000001f80000-0x000002000000 : "config.bin"
+SPI Nand ID Table Version 2.7
+Cannot found a valid SPI Nand Device
+hisi_spi_nand_probe(175): Error: driver probe, result: -19
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ehci-platform: EHCI generic platform driver
+usbcore: registered new interface driver usblp
+usbcore: registered new interface driver usb-storage
+mousedev: PS/2 mouse device common for all mice
+hibvt_rtc 120e0000.rtc: rtc core: registered 120e0000.rtc as rtc0
+hibvt_rtc 120e0000.rtc: RTC driver for hibvt enabled
+i2c /dev entries driver
+hibvt-i2c 12060000.i2c: hibvt-i2c0@100000hz registered
+hibvt-i2c 12061000.i2c: hibvt-i2c1@100000hz registered
+hibvt-i2c 12062000.i2c: hibvt-i2c2@100000hz registered
+uvcvideo: Unable to create debugfs directory
+usbcore: registered new interface driver uvcvideo
+USB Video Class driver (1.1.1)
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pltfm: SDHCI platform and OF driver helper
+mmc0: SDHCI controller on 10010000.sdhci [10010000.sdhci] using ADMA in legacy mode
+mmc1: SDHCI controller on 10020000.sdhci [10020000.sdhci] using ADMA in legacy mode
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+usbcore: registered new interface driver snd-usb-audio
+Initializing XFRM netlink socket
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+Key type dns_resolver registered
+hibvt_rtc 120e0000.rtc: hctosys: unable to read the hardware clock
+ALSA device list:
+  No soundcards found.
+VFS: Mounted root (jffs2 filesystem) on device 31:2.
+devtmpfs: mounted
+Freeing unused kernel memory: 176K (c06ce000 - c06fa000)
+This architecture does not have kernel memory protection.
+random: linuxrc: uninitialized urandom read (4 bytes read)
+
+            _ _ _ _ _ _ _ _ _ _ _ _
+            \  _  _   _  _ _ ___
+            / /__/ \ |_/
+           / __   /  -  _ ___
+          / /  / /  / /
+  _ _ _ _/ /  /  \_/  \_ ______
+___________\___\__________________
+
+[RCS]: /etc/init.d/S00devs
+mknod: /dev/console: File exists
+mknod: /dev/ttyAMA0: File exists
+mknod: /dev/ttyAMA1: File exists
+mknod: /dev/null: File exists
+[RCS]: /etc/init.d/S01udev
+udevd[655]: starting eudev-3.2.7
+[RCS]: /etc/init.d/S80network
+[RCS]: /etc/init.d/S90govee
+Warning: Bad CRC, using default environment
+block info is govee_user_block=A
+RR��ɑ�tools : ver0.0.1_20121120 *** 
+[debug]: {source/utils/cmdshell.c:168}cmdstr:himm
+0x120B8400: 0x00000000 --> 0x00000010 
+[END]
+*** Board tools : ver0.0.1_20121120 *** 
+[debug]: {source/utils/cmdshell.c:168}cmdstr:himm
+0x120B8040: 0x00000000 --> 0x00000010 
+[END]
+rtl8192eu: loading out-of-tree module taints kernel.
+RTW: module init start
+RTW: rtl8189fs v5.7.9_35795.20191128
+RTW: build time: Aug 19 2020 13:01:02
+RTW: rtw_inetaddr_notifier_register
+RTW: module init ret=0
+sdhci-hisi 10020000.sdhci: card claims to support voltages below defined range
+mmc1: new high speed SDIO card at address 0001
+RTW�R��%=�Card Info ==
+RTW:   card: c2496000
+RTW:   clock: 50000000 Hz
+RTW:   timing spec: sd high-speed
+RTW:   sd3_bus_mode: FALSE
+RTW:   func num: 1
+RTW:   func1: c1c5a200 (*)
+RTW: ================
+RTW: CHIP TYPE: RTL8188F
+RTW: rtw_hal_config_rftype RF_Type is 0 TotalTxPath is 1
+RTW: Chip Version Info: CHIP_8188F_Normal_Chip_SMIC_B_CUT_1T1R_RomVer(0)
+RTW: SetHwReg: hci_sus_state=1
+random: fast init done
+RTW: SetHwReg: bMacPwrCtrlOn=1
+RTW: SetHwReg: hci_sus_state=2
+RTW: sdio_power_on_check: val_mix:0x0000063f, res:0x0000063f
+RTW: sdio_power_on_check: 0x100 the result of cmd52 and cmd53 is the same.
+RTW: sdio_power_on_check: 0x1B8 test Pass.
+RTW: EEPROM type is E-FUSE
+RTW: hal_EfuseSwitchToBank: Efuse switch bank to 0
+RTW: hal_ReadEFuse_WiFi: data end at address=0x98
+RTW: HW EFUSE
+RTW: 0x000: 29 81 03 CC  00 00 50 00  00 00 04 CC  0A 0C 00 00  
+RTW: 0x010: 1D 1D 25 24  24 24 1F 1F  27 26 26 02  FF FF FF FF  
+RTW: 0x020: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x030: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x040: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x050: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x060: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x070: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x080: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x090: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x0A0: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x0B0: FF FF FF FF  FF FF FF FF  20 36 1D 00  00 00 00 FF  
+RTW: 0x0C0: FF 2A 00 10  00 FF 00 FF  00 00 FF FF  FF FF FF FF  
+RTW: 0x0D0: 3E 10 01 12  23 FF FF FF  20 04 4C 02  79 F1 21 02  
+RTW: 0x0E0: 0C 00 22 04  00 08 00 32  FF 21 02 0C  00 22 2A 01  
+RTW: 0x0F0: 01 00 00 00  00 00 00 00  00 00 00 00  02 00 FF FF  
+RTW: 0x100: 00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  
+RTW: 0x110: 00 EB 00 6E  01 00 00 00  00 FF 34 20  03 8E 27 37  
+RTW: 0x120: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x130: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x140: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x150: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x160: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x170: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x180: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x190: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x1A0: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x1B0: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x1C0: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x1D0: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x1E0: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: 0x1F0: FF FF FF FF  FF FF FF FF  FF FF FF FF  FF FF FF FF  
+RTW: hal_com_config_channel_plan chplan:0x20
+RTW: kfree Pwr Trim flag:1
+RTW: bb_gain:4
+RTW: rtl8188f_FirmwareDownload((null)) tmp_ps=3
+RTW: rtl8188f_FirmwareDownload fw: FW_NIC, size: 20306
+RTW: rtl8188f_FirmwareDownload: fw_ver=e fw_subver=0000 sig=0x88f1, Month=06, Date=07, Hour=17, Minute=18
+RTW: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTW: rtl8188f_FirmwareDownload by IO write!
+RTW: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x07040105
+RTW: _8051Reset8188: Finish
+RTW: _FWFreeToGo: Polling FW ready OK! (213, 20ms), REG_MCUFWDL:0x070401c6
+RTW: rtl8188f_FirmwareDownload: DLFW OK !
+RTW: rtl8188f_FirmwareDownload success. write_fw:1, 130ms
+RTW:  <=== rtl8188f_FirmwareDownload()
+RTW: hal_read_mac_hidden_rpt OK! (1, 0ms), fwdl:1, id:0x19
+RTW: SetHwReg: bMacPwrCtrlOn=0
+RTW: SetHwReg: hci_sus_state=3
+RTW: SetHwReg: hci_sus_state=0
+RTW: rtw_hal_read_chip_info in 450 ms
+RTW: init_channel_set((null)) ChannelPlan ID:0x20, ch num:13
+RTW: init_mlme_default_rate_set: support CCK
+RTW: init_mlme_default_rate_set: support OFDM
+RTW: rtw_alloc_macid((null)) if1, mac_addr:ff:ff:ff:ff:ff:ff macid:1
+RTW: rtw_init_pwrctrl_priv: IPS_mode=0, LPS_mode=0, LPS_level=0
+RTW: IQK FW offload:disable
+RTW: Init_ODM_ComInfo_8188f(): fab_ver=0 cut_ver=12
+RTW: rtw_regsty_chk_target_tx_power_valid return _FALSE for band:0, path:0, rs:0, t:-1
+RTW: phy_ConfigBBWithPgParaFile(): No File PHY_REG_PG.txt, Load from HWImg Array!
+RTW: default power by rate loaded
+RTW: rtw_macaddr_cfg mac addr:34:20:03:8e:27:37
+RTW: bDriverStopped:True, bSurpriseRemoved:False, bup:0, hw_init_completed:0
+RTW: rtw_wiphy_alloc(phy0)
+RTW: rtw_wdev_alloc(padapter=c340f000)
+RTW: rtw_wiphy_register(phy0)
+RTW: Register RTW cfg80211 vendor cmd(0x67) interface
+RTW: rtw_reg_notifier: NL80211_REGDOM_SET_BY_CORE
+RTW: rtw_ndev_init(wlan0) if1 mac_addr=34:20:03:8e:27:37
+RTW: rtw_ndev_notifier_call(wlan0) state:16
+RTW: cfg80211_rtw_get_txpower
+RTW: rtw_ndev_notifier_call(wlan0) state:5
+rfkill: Cannot open RFKILL control device
+RTW: rtw_ndev_notifier_call(wlan0) state:13
+RTW: _netdev_open(wlan0) , bup=0
+RTW: FW does not exist before power on!!
+RTW: SetHwReg: hci_sus_state=1
+RTW: SetHwReg: bMacPwrCtrlOn=1
+RTW: SetHwReg: hci_sus_state=2
+RTW: sdio_power_on_check: val_mix:0x0000063f, res:0x0000063f
+RTW: sdio_power_on_check: 0x100 the result of cmd52 and cmd53 is the same.
+RTW: sdio_power_on_check: 0x1B8 test Pass.
+RTW: Power on ok!
+RTW: rtl8188f_FirmwareDownload(wlan0) tmp_ps=3
+RTW: rtl8188f_FirmwareDownload fw: FW_NIC, size: 20306
+RTW: rtl8188f_FirmwareDownload: fw_ver=e fw_subver=0000 sig=0x88f1, Month=06, Date=07, Hour=17, Minute=18
+RTW: rtl8188f_FirmwareDownload(): Shift for fw header!
+RTW: rtl8188f_FirmwareDownload by IO write!
+RTW: polling_fwdl_chksum: Checksum report OK! (1, 0ms), REG_MCUFWDL:0x07040105
+RTW: _8051Reset8188: Finish
+random: crng init done
+RTW: _FWFreeToGo: Polling FW ready OK! (172, 20ms), REG_MCUFWDL:0x070401c6
+RTW: rtl8188f_FirmwareDownload: DLFW OK !
+RTW: rtl8188f_FirmwareDownload success. write_fw:1, 130ms
+RTW:  <=== rtl8188f_FirmwareDownload()
+RTW: HalDetectPwrDownMode(): PDN=0
+RTW: Set RF Chip ID to RF_6052 and RF type to 0.
+RTW: rtw_hal_set_macaddr_port wlan0- hw port(0) mac_addr =34:20:03:8e:27:37
+RTW: rtw_hal_get_macaddr_port wlan0- hw port(0) mac_addr =34:20:03:8e:27:37
+RTW: wlan0- hw port(0) mac_addr =34:20:03:8e:27:37
+RTW: [HW_VAR_ENABLE_RX_BAR] 0x6A2=0x500
+RTW: rtw_hal_set_macaddr_port wlan0- hw port(0) mac_addr =34:20:03:8e:27:37
+RTW: #### hw_var_set_opmode() -4620 hw_port(0) mode = 2 ####
+RTW: rtw_rf_get_kfree_tx_gain_offset path:0, ch:6, bb_gain_sel:0, kfree_offset:4
+RTW: kfree gain_offset 0x55:0x82060 RTW:  after :0x92060
+RTW: MAC Address = 34:20:03:8e:27:37
+RTW: rtw_start_drv_threads(wlan0) enter
+RTW: rtw_start_drv_threads(wlan0) start RTW_XMIT_THREAD
+RTW: rtw_start_drv_threads(wlan0) start RTW_CMD_THREAD
+RTW: rtl8188f_start_thread(wlan0) start RTWHALXT
+RTW: start rtl8188fs_xmit_thread(wlan0)
+RTW: rtw_cfg80211_init_wiphy:rf_type=0
+RTW: [HT] HAL Support STBC = 0x01
+RTW: -871x_drv - drv_open, bup=1
+RTW: cfg80211_rtw_set_power_mgmt(wlan0) enabled:0, timeout:-1
+RTW: rtw_ndev_notifier_call(wlan0) state:1
+RTW: cfg80211_rtw_flush_pmksa(wlan0)
+RTW: rtw_ndev_notifier_call(wlan0) state:4
+RTW: cfg80211_rtw_flush_pmksa(wlan0)
+RTW: cfg80211_rtw_scan(wlan0)
+RTW: wlan0 sleep m0=0x00000002, ori reg_0x4d4=0x00000000
+wpa_supplicant up
+sh: 42M: bad number
+udhcpc: started, v1.26.2
+mmz_start: 0x42a00000, mmz_size: 22M
+Setting IP address 0.0.0.0 on wlan0
+==== online_flag=0, cmos_yuv_flag=0, sensor=gc2053, chip=hi3518ev300, board=demo====
+==== g_quick_start_flag=0 ====
+sysconfig init success!
+udhcpc: sending discover
+Module himedia: init ok
+Hisilicon Media Memory Zone Manager
+hi_osal 1.0 init success!
+hi3516ev200_base: module license 'Proprietary' taints kernel.
+Disabling lock debugging due to kernel taint
+load sys.ko for Hi3516EV200...OK!
+load tde.ko for HI3516EV200...OK!
+load region.ko for Hi3516EV200...OK!
+load vgs.ko for Hi3516EV200...OK!
+load vi.ko for Hi3516EV200...OK !
+ISP Mod init!
+load vpss.ko for Hi3516EV200...OK!
+load hifb.ko OK!
+load chnl.ko for Hi3516EV200...OK!
+load vedu.ko for Hi3516EV200...OK!
+load rc.ko for Hi3516EV200...OK!
+load venc.ko for Hi3516EV200...OK!
+load h264e.ko for Hi3516EV200...OK!
+load ive.ko for Hi3516EV200...OK!
+Load sensor_spi.ko for Hi3516EV200...OK !
+load mipi_rx driver successful!
+mount /dev/mtdblock3 to /home/govee ok
+(none) login: RTW: wlan0 wakeup m0=0x00000002, ori reg_0x4d4=0x00000002
+RTW: survey done event(2a) band:0 for wlan0
+RTW: rtw_indicate_scan_done(wlan0)
+RTW: =>cfg80211_rtw_connect(wlan0) - Start to Connection
+RTW: privacy=1, key=  (null), key_len=0, key_idx=0, auth_type=0
+RTW: ssid=qwertzuiop, len=10
+RTW: bssid=54:48:e6:a3:04:22
+RTW: rtw_cfg80211_set_wpa_version, wpa_version=2
+RTW: rtw_cfg80211_set_auth_type, nl80211_auth_type=0
+RTW: cfg80211_rtw_connect, ie_len=22
+RTW: set wpa_ie(length:22):
+RTW: 30 14 01 00  00 0F AC 04  01 00 00 0F  AC 04 01 00  
+RTW: 00 0F AC 02  00 00 
+RTW: got wpa2_ie, wpa2_ielen:20
+
+******************************* Govee ****************************
+**     compile time : 2021-11-19 17:51:55                       **
+**     commit id : 30467313ea13a063f371e527dccc5eb7e6f37df8     **
+**     software version: 1.00.26                                **
+************************************************RTW: rtw_cfg80211_set_cipher, ucast=1, cipher=0xfac04
+******************
+
+RTW: rtw_cfg80211_set_cipher, ucast=0, cipher=0xfac04
+RTW: rtw_cfg80211_set_key_mgt, key_mgt=0xfac02
+RTW: rtw_set_802_11_connect(wlan0)  fw_state=0x00000008
+RTW: [by_bssid:1][assoc_ssid:qwertzuiop][to_roam:0] new candidate: qwertzuiop(54:48:e6:a3:04:22, ch10) rssi:-30
+RTW: rtw_select_and_join_from_scanned_queue: candidate: qwertzuiop(54:48:e6:a3:04:22, ch:10)
+RTW: link to new AP
+RTW: [HT] HAL Support STBC = 0x01
+RTW: [HT] Declare supporting RX STBC = 1
+RTW: rtw_restructure_ht_ie IEEE80211_HT_CAP_MAX_AMSDU is set
+RTW: set ssid:dot11AuthAlgrthm=2, dot11PrivacyAlgrthm=4, dot118021XGrpPrivacy=4
+RTW: <=cfg80211_rtw_connect, ret 0
+RTW: rtw_chk_start_clnt_join(wlan0) req: 10,0,0
+RTW: rtw_chk_start_clnt_join(wlan0) union: 10,0,0
+700101000008.141648 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x25 0x00 0x00 0x00 0xa8 
+0x55 0x01 0x25 0x00 0x00 0x00 0xa8 0x31 0x2e 0x30 0x30 0x2e 0x30 0x31 0x00 0x31 
+0x2e 0x30 0x30 0x2eRTW: rtw_hal_set_bssid wlan0- hw port -0 BSSID: 54:48:e6:a3:04:22
+ 0x32 0x36 0x00 0x34 0x20 0x03 0x8e 0x27 0x37 0x00 0x00 0x00 
+0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x01 0x0a 
+700101000008.143714 DEBUG  [b6ce14c0] govee_uart.c(518)/uart_get_wifi_version() - uart ble get wifi version information ok.
+
+700101000008.144354 DEBUG  [b6ce14c0] govee_uart.c(920)/uart_ble_sync() - uart sync start.
+
+uart send:0x55 0x01 0x01 0x00 0x00 0x00 0xac 0x00 0x03 
+700101000008.147415 INFO   [b64e14c0] govee_uart_protocol.c(546)/Govee_BleUart_SendWifiVersion() - get version is hw 1.00.01,sw 1.00.26 ,mac 34:20:03:8e:27:37
+uart send:0x55 0x01 0x24 0x00 0x00 0x00 0xa8 0x31 0x2e 0x30 0x30 0x2e 0x30 0x31 0x00 0x31 0x2e 0x30 0x30 0x2e 0x32 0x36 0x00 0x34 0x20 0x03 0x8e 0x27 0x37 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x08 
+[SAMPLE_COMM_VI_GetMipiLaneMode]-1854: support this chip 3518e300
+[SAMPLE_COMM_VI_GetMipiLaneMode]-1854: support this chip 3518e300
+[SAMPLE_COMM_VI_SetMipiAttr]-2098: ============= MipiDev 0, SetMipiAttr enWDRMode: 0
+700101000008.170184 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+GC2053_SENSOR_1080P_30FPS_LINEAR_MODE
+===Galaxycore GC2053_1080P_30FPS_10BIT_LINEAR_Init_OK!===
+govee mpp venc init ok.
+[SAMPLE_COMM_ISP_Thread]-376: ISP Dev 0 running !
+xxxxxxx
+bind port -1094275218 ok!
+accept start
+set exp to 40000
+
+<<<(401,585)(215,531)(35,449)(929,0)(1822,409)(1674,488)(1508,552)(954,568)>>>
+ecl = 0.000465
+10 rects 0: 401-585 276-552 481-537 631-576
+10 rects 1: 276-552 153-506 309-473 481-537
+10 rects 2: 153-506 35-449 124-314 309-473
+10 rects 3: 309-473 124-314 329-0 929-340
+10 rects 4: 1274-560 1407-511 1619-511 1508-552
+10 rects 5: 1407-511 1555-444 1725-463 1619-511
+10 rects 6: 1555-444 1734-286 1822-409 1725-463
+10 rects 7: 929-340 1529-0 1734-286 1555-444
+10 rects 8: 631-576 481-537 954-529 954-568
+10 rects 9: 954-568 954-529 1407-511 1274-560
+RTW: OnBeacon: beacon keys ready
+RTW: link to new AP
+RTW: start auth
+RTW: issue_auth
+RTW: OnAuthClient
+RTW: auth success, start assoc
+RTW: network.SupportedRates[0]=8C
+RTW: network.SupportedRates[1]=12
+RTW: network.SupportedRates[2]=98
+RTW: network.SupportedRates[3]=24
+RTW: network.SupportedRates[4]=B0
+RTW: network.SupportedRates[5]=48
+RTW: network.SupportedRates[6]=60
+RTW: network.SupportedRates[7]=6C
+RTW: bssrate_len = 8
+RTW: OnAssocRsp
+RTW: report_join_res(2, 0)
+RTW: rtw_joinbss_update_network
+RTW: +rtw_update_ht_cap()
+RTW: rtw_alloc_macid(wlan0) if1, mac_addr:54:48:e6:a3:04:22 macid:0
+RTW: rtw_joinbss_update_stainfo
+RTW: rtw_get_sta_tx_nss: 1 SS
+RTW: rtw_get_sta_rx_nss: 1 SS
+RTW: STA - MAC_ID:0, Tx - 1 SS, Rx - 1 SS
+RTW: STA - MAC_ID:0, SM_PS 3
+RTW: ht_mcs_set=ff 00 00 00, nss=1, bitmap=000000ff
+RTW: ### Set STA_(0) info ###
+RTW: rtw_xmit_queue_set(wlan0): enable queue TX for macid=0
+RTW: rtw_cfg80211_indicate_connect(wlan0)
+RTW: assoc success
+RTW: rtw_ndev_notifier_call(wlan0) state:4
+RTW: rtw_set_rts_bw connect_to_8812=0,enable=1
+RTW: recv eapol packet 1/4
+RTW: send eapol packet 2/4
+RTW: xmit_enqueue(wlan0): en-queue tx pkt for macid=0
+RTW: HW_VAR_BASIC_RATE: 0x150->0x15f->0x15f
+700101000008.671710 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() - RTW: WMM(0): 0, a42b
+<uart write> =====>
+0x55 0x01 0RTW: WMM(1): 0, a44f
+x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xdRTW: WMM(2): 0, 5e4322
+7 
+RTW: WMM(3): 0, 2f3222
+RTW: wmm_para_seq(0): 0
+RTW: wmm_para_seq(1): 1
+RTW: wmm_para_seq(2): 2
+RTW: wmm_para_seq(3): 3
+RTW: HTOnAssocRsp
+RTW: ============ STA [54:48:e6:a3:04:22]  ===================
+RTW: mac_id : 0
+RTW: wireless_mode : 0x0a
+RTW: mimo_type : 0
+RTW: static smps : N
+RTW: bw_mode : 20MHz, ra_bw_mode : 20MHz
+RTW: rate_id : 5
+RTW: rssi : 69 (%), rssi_level : 0
+RTW: is_support_sgi : Y, is_vht_enable : N
+RTW: disable_ra : N, disable_pt : N
+RTW: is_noisy : N
+RTW: txrx_state : 0
+RTW: curr_tx_rate : CCK_1M (L)
+RTW: curr_tx_bw : 20MHz
+RTW: curr_retry_ratio : 0
+RTW: ra_mask : 0x00000000000ffff0
+
+RTW: wlan0 wakeup macid=0, ori reg_0x4d4=0x00000000
+RTW: rtw_xmit_queue_clear(wlan0): disable queue TX for macid=0
+RTW: xmit_dequeue(wlan0): de-queue tx frame of macid=0
+RTW: rtl8188f_fill_default_txdesc(wlan0): SP Packet(0x888E) rate=0x4 SeqNum = 1
+RTW: rtw_join_done_chk_ch(wlan0) union:10,0,0
+RTW: =>mlmeext_joinbss_event_callback - End to Connection without 4-way
+RTW: recv eapol packet 3/4
+RTW: send eapol packet 4/4
+RTW: rtl8188f_fill_default_txdesc(wlan0): SP Packet(0x888E) rate=0x4 SeqNum = 2
+RTW: cfg80211_rtw_add_key(wlan0) adding key for 54:48:e6:a3:04:22
+RTW: cfg80211_rtw_add_key(wlan0) cipher=0xfac04
+RTW: cfg80211_rtw_add_key(wlan0) key_len=16, key_index=0
+RTW: cfg80211_rtw_add_key(wlan0) pairwise=1
+RTW: cfg80211_rtw_add_key(wlan0) seq_len:6, seq:0x0
+RTW: rtw_cfg80211_set_encryption
+RTW: rtw_cfg80211_set_encryption(wlan0) set CCMP PTK idx:0, len:16
+RTW: rtw_cfg80211_set_encryption, ret=0
+RTW: set pairwise key camid:4, addr:54:48:e6:a3:04:22, kid:0, type:AES
+RTW: cfg80211_rtw_add_key(wlan0) cipher=0xfac04
+RTW: cfg80211_rtw_add_key(wlan0) key_len=16, key_index=1
+RTW: cfg80211_rtw_add_key(wlan0) pairwise=0
+RTW: cfg80211_rtw_add_key(wlan0) seq_len:6, seq:0x0
+RTW: rtw_cfg80211_set_encryption
+RTW: rtw_cfg80211_set_encryption(wlan0) set CCMP GTK idx:1, len:16
+RTW: ==> rtw_set_key algorithm(4),keyid(1),key_mask(0)
+RTW: rtw_cfg80211_set_encryption, ret=0
+RTW: set group key camid:5, addr:54:48:e6:a3:04:22, kid:1, type:AES
+RTW: rtw_ndev_notifier_call(wlan0) state:4
+700101000008.930256 INFO   [b29514c0] govee_wifi.c(461)/wifi_event_handle() - 【wpa event】 <3>CTRL-EVENT-CONNECTED - Connection to 54:48:e6:a3:04:22 completed (auth) [id=0 id_str=]
+
+udhcpc: received SIGTERM
+udhcpc: started, v1.26.2
+Setting IP address 0.0.0.0 on wlan0
+udhcpc: sending discover
+RTW: rtl8188f_fill_default_txdesc(wlan0): SP Packet(0x0800) rate=0x4 SeqNum = 3
+udhcpc: sending select for 192.168.3.188
+RTW: rtl8188f_fill_default_txdesc(wlan0): SP Packet(0x0800) rate=0x4 SeqNum = 4
+udhcpc: lease of 192.168.3.188 obtained, lease time 43200
+Setting IP address 192.168.3.188 on wlan0
+Deleting routers
+route: SIOCDELRT: No such process
+Adding router 192.168.3.1
+Recreating /etc/resolv.conf
+ Adding DNS server 192.168.3.2
+700101000009.043771 INFO   [b09514c0] govee_wifi.c(409)/wifi_dhcp_check() - 【wpa event】 udhcpc ok.
+
+700101000009.044764 DEBUG  [b09514c0] govee_awsiot.c(1157)/iot_message_listen() - wifi state is -1
+
+uart send:0x55 0x01 0x01 0x00 0x00 0x00 0xac 0x01 0x04 
+700101000009.180164 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+700101000009.690209 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+RTW: Turbo EDCA =0x5ea42b
+700101000010.200154 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+700101000010.710136 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+700101000011.220500 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+700101000011.730182 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+700101000012.240192 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() -RTW: Turbo EDCA =0xa42b
+ <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+700101000012.750116 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+700101000013.260202 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+
+���2}����}����ձ�}�ᑕ͍�wlan0): SP Packet(0x0806) rate=0x4 SeqNum = 5
+RTW: OnAction_back
+RTW: OnAction_back, action=0
+RTW: issue_addba_rsp_wait_ack(wlan0) ra=54:48:e6:a3:04:22 status:=0 tid=0 size:16, acked, 1/3 in 10 ms
+700101000013.770176 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+RTW: rtl8188f_fill_default_txdesc(wlan0): SP Packet(0x0806) rate=0x4 SeqNum = 12
+RTW: rtl8188f_fill_default_txdesc(wlan0): SP Packet(0x0806) rate=0x4 SeqNum = 16
+700101000014.280107 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+RTW: Turbo EDCA =0x5ea42b
+700101000014.790181 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+&&���r����"	U� [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+221014222925.335196 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+221014222925.845474 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+RTW: Turbo EDCA =0xa42b
+221014222926.355250 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+��������ʒ�r²����"	U� [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+221014222927.375190 DEBUG  [b6ce14c0] govee_uart.c(81)/uart_data_print() - <uart write> =====>
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 
+0x55 0x01 0x00 0x00 0x00 0x00 0x81 0xd7 
+221014222927.885228 WARN   [b6ce14c0] govee_uart.c(1008)/uart_ble_sync() - uart sync failed.
+
+221014222927.886103 ERROR  [b6ce14c0] govee_uart.c(1031)/uart_recv_process() - uart sync ble failed.
+
+221014222927.935794 DEBUG  [b19514c0] govee_ota.c(166)/ota_check_packet() - {"sku":"H6199","device":"0F:A7:A4:C1:38:74:30:AC","wifiVersionSoft":"1.00.26","wifiVersionHard":"1.00.01","bleVersionSoft":"1.06.02","bleVersionHard":"1.00.01"}
+
+RTW: Turbo EDCA =0x5ea42b
+RTW: rtl8188f_fill_default_txdesc(wlan0): SP Packet(0x0806) rate=0x4 SeqNum = 24
+221014222928.323989 DEBUG  [b19514c0] govee_ota.c(176)/ota_check_packet() - {"checkVersion":{"sku":"","versionHard":"","versionSoft":"","needUpdate":false,"downloadUrl":"","md5":"","size":0,"time":27763110},"message":"success","status":200}
+
+221014222928.327555 INFO   [b19514c0] govee_ota.c(118)/ota_response_parser() - Device is not need upgrade.
+
+
+(none) login:
