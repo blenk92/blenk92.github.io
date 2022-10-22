@@ -77,3 +77,5 @@ Clearly, this is bad and I fear I need to recommend to disable the updates. This
 127.0.0.1 app.govee.com
 ```
 This forces the update procedure to fail, while the device can still be controlled via the app. Not nice I know. But as long as there is no proper fix for the update procedure, not disabling it leaves the risk that someone breaks into your network. If there ever is an update it should probably be downloaded manually, inspected before installation and be installed using a python script like the one above.
+
+Have fun!
